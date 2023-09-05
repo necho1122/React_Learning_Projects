@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('ruta/hacia/la/fuente/helvetica-neue.woff2') format('woff2'),
+         url('ruta/hacia/la/fuente/helvetica-neue.woff') format('woff');
+}
+
+body{
+    background-color: #040D12;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fff;
+}
+
+.tw-container-card{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tw-container-header{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.tw-profile-photo{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+.tw-user-data{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn-follow-on{
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    border: 1px solid #000;
+    transition: .3s ease background-color;
+}
+
+.btn-follow-on:hover{
+    background-color: #0c86d1;
+}
+
+.btn-follow-off{
+    border: 1px solid #bbb;
+    background: transparent;
+    color: #fff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+.btn-follow-off:hover{
+    background-color: #e76d5780;
+    color: red;
+}
+
+.btn-follow-off:hover .tw-followCard-text{
+    display: none;
+}
+
+.btn-follow-off:hover .tw-btn-unfollow {
+    display: block;
+}
+
+.tw-btn-unfollow{
+    display: none;
+}
