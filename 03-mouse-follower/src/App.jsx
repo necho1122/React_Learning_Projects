@@ -1,13 +1,12 @@
-import MouseFollower from './components/MouseFollower'
-import './App.css'
+import MouseFollower from "./components/MouseFollower";
+import "./App.css";
 
 function App() {
-
   return (
     <>
       <MouseFollower />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
