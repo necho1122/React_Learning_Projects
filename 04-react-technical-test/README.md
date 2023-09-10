@@ -1,10 +1,10 @@
-# Prueba técnica para Juniors y Trainees de React en Live Coding.
+# Technical test for Juniors and Trainees of React in Live Coding.
 
-APIs:
+APIS:
 
-- Facts Random: https://catfact.ninja/fact
-- Imagen random: https://cataas.com/cat/says/hello
+- FACTS RANDOM: https://catfact.ninja/fact
+- Random image: https://cataas.com/cat/sys/hello
 
-- Recupera un hecho aleatorio de gatos de la primera API
-- Recuperar la primera palabra del hecho
-- Muestra una imagen de un gato con la primera palabra.
+- Recover a random fact of cats from the first API
+- Recover the first word of the fact
+- Show an image of a cat with the first word
