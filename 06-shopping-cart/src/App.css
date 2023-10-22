@@ -1,0 +1,44 @@
+.products{
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      200px,
+      1fr
+    )
+  );
+  grid-gap: 1rem;
+}
+
+.products img {
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  object-fit: cover;
+  background: #fff;
+}
+
+.products .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 4px;
+  background: #0e1625;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.light h1 {
+  color: #0e1625;
+}
+
+.light .theme-indicator {
+color: #0e1625;
+}
