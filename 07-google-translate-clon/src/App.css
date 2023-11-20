@@ -22,6 +22,7 @@ input, .output {
   font-size: 2rem;
   padding: 1rem;
   min-width: 300px;
+  width: 100%;
 }
 
 input {
@@ -75,5 +76,68 @@ img, i {
   width: 17px;
   height: 17px;
   fill: rgb(25, 103, 210);
+  padding: auto;
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+select {
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  color: #757575;
+  font-weight: 600;
+}
+
+select:hover {
+  background-color: rgb(229, 232, 236);
+  border-radius: 4px;
+}
+
+.language-selector select {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  list-style: none;
+}
+
+.language-selector select:focus{
+  text-decoration: underline solid 2px rgb(25, 103, 210);
+}
+
+.language-selector button {
+  border: solid 1px #ccc9c9;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.language-selector button:hover {
+  background-color: rgb(229, 232, 236);
+  border-radius: 50%;
+
+}
+
+.language-selector button img {
+  width: 17px;
+  height: 17px;
+  fill: white;
   padding: auto;
 }
