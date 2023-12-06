@@ -6,32 +6,15 @@ import {
 	TableHead,
 	TableHeaderCell,
 	TableBody,
-	BadgeDelta,
 } from "@tremor/react";
+import { useAppSelector } from "../hooks/store";
+import { useUserActions } from "../hooks/useUserActions";
 
-interface User {
-	id: string;
-	name: string;
-	emmail: string;
-	github: string;
-}
 
-const users: User[] = [
-	{
-		id: "1",
-		name: "John Doe",
-		emmail: "sampaio@gmail.com",
-		github: "john.doe",
-	},
-	{
-		id: "2",
-		name: "Jane Doe",
-		emmail: "car2@gmail.com",
-		github: "jane.doe",
-	},
-]; // Add your user data here
 
-export function CrudCpmponent() {
+export function CrudComponent() {
+	const users = useAppSelector((state) => state.users);
+	const { removeUser } = useUserActions();
 	return (
 		<Card>
 			<Table>
@@ -48,19 +31,25 @@ export function CrudCpmponent() {
 						<TableRow key={item.id}>
 							<TableCell className="text-right">{item.id}</TableCell>
 							<TableCell className="text-right">{item.name}</TableCell>
-							<TableCell className="text-right">{item.emmail}</TableCell>
+							<TableCell className="text-right">{item.email}</TableCell>
 							<TableCell className="text-right">{item.github}</TableCell>
 
 							<TableCell className="text-right">
-								<button type="button">
+								<button
+								type="button"
+								style={{ marginRight: "8px" }}
+								onClick={() => removeUser(item.id)}
+								>
 									{/* rome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 									<svg
+										aria-label="remove element"
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
 										className="w-6 h-6"
+										
 									>
 										<path
 											strokeLinecap="round"
@@ -71,7 +60,7 @@ export function CrudCpmponent() {
 								</button>
 								<button type="button">
 									{/* rome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
-<svg
+									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"

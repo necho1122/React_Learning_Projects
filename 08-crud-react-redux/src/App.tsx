@@ -1,10 +1,14 @@
 import './App.css'
-import { CrudCpmponent } from './components/CrudComponent';
+import { CrudComponent } from './components/CrudComponent';
+import { AddNewUserForm } from './components/AddNewUserForm';
 
 function App() {
 
   return (
-   < CrudCpmponent />
+    <>
+   < CrudComponent />
+   <AddNewUserForm />
+   </>
   )
 }
 
