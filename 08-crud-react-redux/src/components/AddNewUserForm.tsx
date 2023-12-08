@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const AddNewUserForm = () => {
 	const { addUser } = useUserActions();
-    const [result, setResult] = useState<'ok' | 'ok' | null>(null);
+    const [result, setResult] = useState<'ok' | 'ko' | null>(null);
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		const form = event.target;
@@ -15,7 +15,8 @@ export const AddNewUserForm = () => {
 		const github = formData.get("github") as string;
 
         if (!name || !email || !github) {
-            setResult('ok');
+            setResult('ko');
+			return;
         }
 
         addUser({ name, email, github });
@@ -38,9 +39,8 @@ export const AddNewUserForm = () => {
                 placeholder="GitHub User" />
 				<Button type="submit">Add</Button>
                 <span>
-                    {result === 'ok' && (<Badge color="green">Saved</Badge>) }
-                    {result === 'ok' && <Badge color="red">Error</Badge> }
-                    
+                    {result === 'ok' && (<Badge style={{color: "green"}}>Saved</Badge>) }
+                    {result === 'ko' && <Badge style={{color: "red"}}>Error</Badge> }
                     </span>
 			</form>
 		</Card>
